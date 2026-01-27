@@ -323,14 +323,29 @@
             margin-bottom: 1rem;
         }
 
-        #contact a {
-            color: var(--primary);
+        /* Email Button Styles */
+        .email-button {
+            display: inline-block;
+            background: var(--primary);
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            margin: 0.5rem;
         }
 
-        #contact a:hover {
-            text-decoration: underline;
+        .email-button:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .email-button:active {
+            transform: translateY(0);
         }
 
         /* Footer */
@@ -440,8 +455,8 @@
 
     <section id="contact">
         <h2>Contact CloudMobile</h2>
-        <p>Sales: <a href="mailto:sales@cloudmobile.co.za">sales@cloudmobile.co.za</a></p>
-        <p>Support: <a href="mailto:support@cloudmobile.co.za">support@cloudmobile.co.za</a></p>
+        <p>Sales: <button class="email-button" onclick="revealEmail('sales')">Click to Email Sales</button></p>
+        <p>Support: <button class="email-button" onclick="revealEmail('support')">Click to Email Support</button></p>
     </section>
 
     <footer>
@@ -454,6 +469,13 @@
     </footer>
 
     <script>
+        // Email reveal function to protect from scrapers
+        function revealEmail(type) {
+            const domain = 'cloudmobile.co.za';
+            const email = type + '@' + domain;
+            window.location.href = 'mailto:' + email;
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             // Smooth scrolling for navigation links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -468,7 +490,6 @@
     </script>
 </body>
 </html>
-
 
 
 
