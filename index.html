@@ -1,536 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary SEO Meta Tags -->
-    <title>CloudMobile | Global Mobile, Web, and Backend Development Services</title>
-    <meta name="description" content="CloudMobile provides world-class mobile, web, and backend development services. Download Easy Budget - Spending Tracker, our intelligent budget management app on Google Play.">
-   
-<link rel="icon" type="image/png" sizes="256x256" href="/favicon-256x256.png">
-<link rel="shortcut icon" href="/favicon-256x256.png" type="image/x-icon">
-    <!-- Open Graph / Social Media Tags -->
+    <meta charset="UTF-8" />
+    <title>CloudMobile | Global Software Development</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Global Software Development. Engineering Digital Solutions Worldwide. Android, web, and backend development services. Download Easy Budget - Spending Tracker, our intelligent budget management app on Google Play." />
+    <meta name="keywords" content="mobile app development, android development, web development, backend development, software engineering, global software solutions, mobile app design, cloud software, budget management app, spending tracker, easy budget" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
+
     <meta property="og:type" content="business.business">
     <meta property="og:title" content="CloudMobile - Global Software Development Services">
     <meta property="og:description" content="Comprehensive software development services including Android, web, and backend solutions for businesses worldwide.">
     <meta property="og:url" content="https://cloudmobile.co.za">
     <meta property="business:contact_data:street_address" content="South Africa">
     <meta property="business:contact_data:country_name" content="South Africa">
-    
+
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="CloudMobile - Global Software Development">
     <meta name="twitter:description" content="Expert mobile, web, and backend development services spanning across international markets.">
-    
-    <!-- Keywords -->
-    <meta name="keywords" content="mobile app development, android development, web development, backend development, software engineering, global software solutions, mobile app design, cloud software, budget management app, spending tracker, easy budget">
-    
-    <!-- Geo Tags -->
-    <meta name="geo.region" content="ZA">
-    <meta name="geo.placename" content="South Africa">
-    
-    <!-- Robots Tag for Indexing -->
-    <meta name="robots" content="index, follow">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://cloudmobile.co.za">
+
+    <link rel="canonical" href="https://cloudmobile.co.za" />
+
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.png">
-    
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" sizes="256x256" href="/favicon-256x256.png">
+
+    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
-    <!-- Schema.org Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareCompany",
-      "name": "CloudMobile",
-      "description": "Global software development services specializing in mobile, web, and backend solutions",
-      "url": "https://cloudmobile.co.za",
-      "logo": "https://cloudmobile.co.za/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+27 XX XXX XXXX",
-        "email": "sales@cloudmobile.co.za",
-        "contactType": "Sales Support"
-      },
-      "sameAs": [
-        "https://play.google.com/store/apps/developer?id=CloudMobile"
-      ],
-      "offers": {
-        "@type": "Offer",
-        "description": "Easy Budget - Spending Tracker Mobile Application",
-        "url": "https://play.google.com/store/apps/details?id=za.co.cloudmobile.budgetapp"
-      }
-    }
-    </script>
+
     <style>
         :root {
-            --bg-dark: #05050a;
-            --bg-card: rgba(255, 255, 255, 0.03);
             --primary: #3b82f6;
-            --primary-glow: rgba(59, 130, 246, 0.5);
+            --bg-dark: #020617;
+            --bg-card: #0f172a;
             --text-main: #f8fafc;
             --text-dim: #94a3b8;
-            --border: rgba(255, 255, 255, 0.08);
+            --border: rgba(255,255,255,0.08);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-        
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--bg-dark);
+            background: radial-gradient(circle at top, #020617, #000);
             color: var(--text-main);
             line-height: 1.6;
-            overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
         }
 
-        /* Navigation Styles */
-        nav {
-            background: rgba(5, 5, 10, 0.8);
-            backdrop-filter: blur(12px);
-            padding: 1.5rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
+        a { text-decoration: none; color: inherit; }
+
+        /* HEADER */
+        header.top {
             border-bottom: 1px solid var(--border);
+            background: rgba(2,6,23,0.85);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
-        
-        .nav-container {
+
+        .nav {
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            margin: auto;
+            padding: 1.4rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        
-        /* Logo Styling */
-        .logo-wrapper {
+
+        .brand {
             display: flex;
             align-items: center;
-            text-decoration: none;
-        }
-        
-        .logo-text {
-            font-size: 1.4rem;
             font-weight: 800;
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
-        }
-        
-        .logo-text .cloud { color: #fff; }
-        .logo-text .mobile { color: var(--primary); }
-        
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: var(--text-dim);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 180px 2rem 100px;
-            background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent),
-                        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.05), transparent);
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            font-weight: 800;
-            letter-spacing: -2px;
-            margin-bottom: 1.5rem;
-            line-height: 1.1;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(to right, #fff, var(--primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .hero p {
+            letter-spacing: 1.5px;
             font-size: 1.25rem;
-            color: var(--text-dim);
-            margin-bottom: 3rem;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background: var(--primary);
-            color: #fff;
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 10px 25px -5px var(--primary-glow);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 20px 30px -5px var(--primary-glow);
-            filter: brightness(1.1);
         }
 
-        /* Services Section */
-        .services {
-            padding: 100px 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
+        .logo-cloud {
+            color: #ffffff;
         }
 
-        .section-tag {
+        .logo-mobile {
             color: var(--primary);
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 0.5rem;
-            display: block;
+            margin-left: 2px;
+            position: relative;
         }
-        
+
+        /* subtle tech underline */
+        .logo-mobile::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--primary),
+                    transparent
+            );
+        }
+
+        .brand span:last-child { color: var(--primary); }
+
+        nav a {
+            margin-left: 2rem;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        /* HERO */
+        .hero {
+            max-width: 100%;
+            padding: 6rem 2rem 5rem;
+            text-align: center;
+
+            background:
+                    radial-gradient(circle at top center,
+                    rgba(59,130,246,0.25),
+                    rgba(2,6,23,0.9) 70%),
+                    linear-gradient(180deg,
+                    rgba(59,130,246,0.18),
+                    rgba(2,6,23,1));
+        }
+
+        .hero h1 {
+            font-size: clamp(2.4rem, 4vw, 3.8rem);
+            font-weight: 800;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: var(--text-dim);
+            margin-bottom: 1.2rem;
+        }
+
+        .hero p {
+            max-width: 850px;
+            margin: auto;
+            color: var(--text-dim);
+        }
+
+        section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 4.5rem 2rem;
+        }
+
+        /* SERVICES */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 2rem;
         }
-        
-        .service-card {
-            background: var(--bg-card);
-            padding: 3rem 2rem;
-            border-radius: 24px;
-            border: 1px solid var(--border);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .service-card:hover {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--primary);
-            transform: translateY(-8px);
-        }
-        
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-        
-        .service-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-        
-        .service-card p {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        
-        /* Download Section */
-        .download {
-            padding: 100px 2rem;
-            background: inset 0 0 100px rgba(0,0,0,0.5);
-        }
-        
-        .download-card {
-            max-width: 800px;
-            margin: 0 auto;
-            background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(5, 5, 10, 0.5));
-            padding: 4rem 2rem;
-            border-radius: 32px;
-            border: 1px solid var(--border);
-            text-align: center;
-        }
 
-        .app-badge {
-            background: rgba(34, 197, 94, 0.2);
-            color: #22c55e;
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-        }
-        
-        .download-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #fff;
-            color: #000;
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            margin-top: 2rem;
+        .service {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            text-align: center;
             transition: 0.3s;
         }
 
-        .download-button:hover { 
-            background: #e2e8f0;
-            transform: translateY(-2px);
+        .service:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
         }
 
-        /* Contact Section */
-        #contact {
-            padding: 100px 2rem;
+        .service img {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            margin-bottom: 1.2rem;
+        }
+
+        .service h3 { margin-bottom: 0.6rem; }
+
+        .service p { color: var(--text-dim); font-size: 0.95rem; }
+
+        /* FEATURED APP */
+        .featured {
+            background: linear-gradient(135deg, #0f172a, #020617);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(34,197,94,0.15);
+            color: #22c55e;
+            padding: 0.4rem 1rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .featured img { width: 180px; }
+
+        /* CONTACT */
+        .contact {
             text-align: center;
-            background: rgba(5, 5, 10, 0.5);
         }
 
-        #contact h2 {
-            margin-bottom: 2rem;
-            color: var(--text-main);
-            font-size: 2.5rem;
-        }
-
-        #contact p {
-            color: var(--text-dim);
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
+        .contact-buttons {
             display: flex;
-            align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 1.5rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
         }
 
-        /* Email Button Styles */
-        .email-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+        .contact-buttons a {
             background: var(--primary);
             color: #fff;
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
+            padding: 0.9rem 1.6rem;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
             font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-            cursor: pointer;
-            border: none;
-            font-size: 1rem;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
         }
 
-        .email-button:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        .contact-buttons svg {
+            width: 18px;
+            height: 18px;
+            fill: white;
         }
 
-        .email-button:active {
-            transform: translateY(0);
-        }
-
-        .email-label {
-            min-width: 80px;
-            text-align: right;
-            font-weight: 600;
-            color: var(--text-main);
-        }
-
-        /* Footer */
+        /* FOOTER */
         footer {
-            padding: 4rem 2rem 2rem;
             border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
             text-align: center;
-        }
-        
-        .footer-links a {
             color: var(--text-dim);
-            text-decoration: none;
-            margin: 0 1rem;
             font-size: 0.85rem;
-            transition: color 0.3s;
         }
 
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-
-        .copyright {
-            margin-top: 2rem;
-            color: var(--text-dim);
-            font-size: 0.8rem;
-            opacity: 0.6;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero { padding-top: 140px; }
-            .hero h1 { font-size: 2.5rem; }
-            .services-grid { grid-template-columns: 1fr; }
-            #contact p { flex-direction: column; gap: 8px; }
-            .email-label { text-align: center; }
-        }
+        footer a { margin: 0 1rem; }
     </style>
 </head>
+
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo-wrapper">
-                <div class="logo-text">
-                    <span class="cloud">Cloud</span><span class="mobile">Mobile</span>
-                </div>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#download">Product</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
 
-    <section class="hero">
-        <div class="hero-content">
-            <span class="section-tag">Global Software Development</span>
-            <h1>Engineering <span>Digital Solutions</span> Worldwide</h1>
-            <p>Delivering cutting-edge mobile, web, and backend development services to businesses across the globe. From Android apps to complex cloud architectures.</p>
-            <a href="#contact" class="cta-button">Get a Consultation</a>
+<header class="top">
+    <div class="nav">
+        <div class="brand">
+            <span class="logo-cloud">CLOUD</span>
+            <span class="logo-mobile">MOBILE</span>
         </div>
-    </section>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#product">Product</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
 
-    <section class="services" id="services">
-        <div class="section-header">
-            <span class="section-tag">Our Expertise</span>
-            <h2>Comprehensive Development Solutions</h2>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <span class="service-icon">🤖</span>
-                <h3>Android Development</h3>
-                <p>Custom Android app development with focus on performance, user experience, and scalability for global markets.</p>
-            </div>
-            
-            <div class="service-card">
-                <span class="service-icon">🌐</span>
-                <h3>Web Development</h3>
-                <p>Responsive and innovative web solutions that work seamlessly across devices and platforms.</p>
-            </div>
-            
-            <div class="service-card">
-                <span class="service-icon">☁️</span>
-                <h3>Backend Architecture</h3>
-                <p>Robust, scalable backend systems designed to support complex business logic and global infrastructure.</p>
-            </div>
-        </div>
-    </section>
+<div class="hero">
+    <h1>Global Software Development</h1>
+    <h2>Engineering Digital Solutions Worldwide</h2>
+    <p>
+        Delivering cutting-edge mobile, web, and backend development services to businesses
+        across the globe. From Android apps to complex cloud architectures.
+    </p>
+</div>
 
-    <section class="download" id="download">
-        <div class="download-card">
-            <span class="app-badge">NOW AVAILABLE</span>
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Easy Budget – Spending Tracker</h2>
-            <p style="color: var(--text-dim); font-size: 1.1rem;">Intelligent financial management app. Track, analyze, and optimize your spending with advanced features.</p>
-            
-            <a href="https://play.google.com/store/apps/details?id=za.co.cloudmobile.budgetapp" target="_blank" class="download-button">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
-                </svg>
-                Download on Google Play
+<section id="services">
+    <div class="services-grid">
+        <div class="service">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png">
+            <h3>Android Development</h3>
+            <p>High-performance Android applications built for scale and reliability.</p>
+        </div>
+
+        <div class="service">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
+            <h3>Web Development</h3>
+            <p>Modern front-end and full-stack web solutions.</p>
+        </div>
+
+        <div class="service">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg">
+            <h3>Cloud & Backend</h3>
+            <p>Secure, scalable backend systems using Java, Spring, and cloud platforms.</p>
+        </div>
+    </div>
+</section>
+
+<section id="product">
+    <div class="featured">
+        <div>
+            <span class="badge">FEATURED APP OF THE MONTH</span>
+            <h2>Easy Budget – Spending Tracker</h2>
+            <p>Smart budgeting and expense tracking for everyday life.</p>
+            <a href="https://play.google.com/store/apps/details?id=za.co.cloudmobile.budgetapp">
+                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
             </a>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section id="contact">
-        <span class="section-tag">Get in Touch</span>
-        <h2>Contact CloudMobile</h2>
-        
-        <p>
-            <span class="email-label">Sales</span>
-            <button class="email-button" onclick="revealEmail('sales')">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                Email Sales
-            </button>
-        </p>
-        
-        <p>
-            <span class="email-label">Support</span>
-            <button class="email-button" onclick="revealEmail('support')">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                Email Support
-            </button>
-        </p>
-    </section>
+<section id="contact" class="contact">
+    <h2>Contact CloudMobile</h2>
+    <div class="contact-buttons">
+        <a href="mailto:sales@cloudmobile.co.za">
+            ✉️ Sales Email
+        </a>
+        <a href="mailto:support@cloudmobile.co.za">
+            ✉️ Support Email
+        </a>
+    </div>
+</section>
 
-    <footer>
-        <div class="footer-links">
-            <a href="terms.html">Terms of Service</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="mailto:support@cloudmobile.co.za">Contact Support</a>
-        </div>
-        <p class="copyright">&copy; 2026 CloudMobile (PTY) LTD. Built with precision.</p>
-    </footer>
+<footer>
+    <a href="terms.html">Terms of Service</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <p>© 2026 CloudMobile (PTY) LTD</p>
+</footer>
 
-    <script>
-        // Email reveal function to protect from scrapers
-        function revealEmail(type) {
-            const domain = 'cloudmobile.co.za';
-            const email = type + '@' + domain;
-            window.location.href = 'mailto:' + email;
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if(target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 </html>
+
+
 
 
 
