@@ -5,8 +5,8 @@
     <title>CloudMobile | Global Software Development</title>
 
     <!-- SEO -->
-    <meta name="description" content="Global Software Development. Engineering Digital Solutions Worldwide. Android, web, and backend development services. Download Easy Budget - Spending Tracker, our intelligent budget management app on Google Play." />
-    <meta name="keywords" content="mobile app development, android development, web development, backend development, software engineering, global software solutions, mobile app design, cloud software, budget management app, spending tracker, easy budget" />
+    <meta name="description" content="Global Software Development. Engineering Digital Solutions Worldwide. Android, web, and backend development services. Download Easy Budget - Spending Tracker and Happy Habits - Daily Habit Tracker, our intelligent apps on Google Play." />
+    <meta name="keywords" content="mobile app development, android development, web development, backend development, software engineering, global software solutions, mobile app design, cloud software, budget management app, spending tracker, easy budget, habit tracker, daily habits, habit building, atomic habits, habit streak, routine tracker, productivity app, happy habits, goal tracking, self improvement app" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
 
@@ -188,16 +188,26 @@
 
         .service p { color: var(--text-dim); font-size: 0.95rem; }
 
-        /* FEATURED APP */
+        /* FEATURED APPS */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 2rem;
+        }
+
         .featured {
             background: linear-gradient(135deg, #0f172a, #020617);
             border: 1px solid var(--border);
             border-radius: 22px;
             padding: 3rem;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 2rem;
-            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .featured:hover {
+            border-color: var(--primary);
+            transition: 0.3s;
         }
 
         .badge {
@@ -209,9 +219,43 @@
             font-size: 0.75rem;
             font-weight: 700;
             margin-bottom: 0.8rem;
+            width: fit-content;
         }
 
-        .featured img { width: 180px; }
+        .badge.purple {
+            background: rgba(168,85,247,0.15);
+            color: #a855f7;
+        }
+
+        .featured h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .featured p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .featured .app-features {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .featured .app-features li {
+            background: rgba(59,130,246,0.1);
+            color: var(--text-dim);
+            border: 1px solid rgba(59,130,246,0.2);
+            border-radius: 999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.8rem;
+        }
+
+        .featured img.store-badge { width: 180px; }
 
         /* CONTACT */
         .contact {
@@ -253,6 +297,12 @@
         }
 
         footer a { margin: 0 1rem; }
+
+        @media (max-width: 600px) {
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 
@@ -266,7 +316,7 @@
         </div>
         <nav>
             <a href="#services">Services</a>
-            <a href="#product">Product</a>
+            <a href="#product">Apps</a>
             <a href="#contact">Contact</a>
         </nav>
     </div>
@@ -304,16 +354,53 @@
 </section>
 
 <section id="product">
-    <div class="featured">
-        <div>
-            <span class="badge">FEATURED APP OF THE MONTH</span>
-            <h2>Easy Budget – Spending Tracker</h2>
-            <p>Smart budgeting and expense tracking for everyday life.</p>
-            <a href="https://play.google.com/store/apps/details?id=za.co.cloudmobile.budgetapp">
-                <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png">
-            </a>
+    <h2 style="margin-bottom: 2rem; font-size: 1.8rem;">Our Apps</h2>
+    <div class="apps-grid">
+
+        <!-- Easy Budget -->
+        <div class="featured">
+            <div>
+                <span class="badge">FEATURED APP</span>
+                <h2>Easy Budget – Spending Tracker</h2>
+                <p>Smart budgeting and expense tracking for everyday life. Take control of your finances with ease.</p>
+                <ul class="app-features">
+                    <li>💰 Expense Tracking</li>
+                    <li>📊 Spending Reports</li>
+                    <li>🎯 Budget Goals</li>
+                    <li>📅 Monthly Overview</li>
+                </ul>
+                <a href="https://play.google.com/store/apps/details?id=za.co.cloudmobile.budgetapp">
+                    <img class="store-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Easy Budget on Google Play">
+                </a>
+            </div>
         </div>
+
+        <!-- Happy Habits -->
+        <div class="featured">
+            <div>
+                <span class="badge purple">NEW APP</span>
+                <h2>Happy Habits – Daily Habit Tracker</h2>
+                <p>Build better habits, break bad ones, and transform your daily routine. Track streaks, set reminders, and achieve your goals one habit at a time — inspired by the science of lasting behaviour change.</p>
+                <ul class="app-features">
+                    <li>✅ Daily Habit Tracking</li>
+                    <li>🔥 Streak Tracking</li>
+                    <li>🔔 Smart Reminders</li>
+                    <li>📈 Progress Analytics</li>
+                    <li>🎯 Goal Setting</li>
+                    <li>💪 Routine Builder</li>
+                </ul>
+                <a href="https://play.google.com/store/apps/details?id=za.co.cloudmobile.happyhabits">
+                    <img class="store-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Happy Habits on Google Play">
+                </a>
+            </div>
+        </div>
+
     </div>
+</section>
+
+<!-- Hidden SEO content for habit-related searches -->
+<section style="display:none" aria-hidden="true">
+    <p>Happy Habits is a daily habit tracker app for Android. Build atomic habits, track your daily routines, create healthy habits, and break bad habits. Similar to habit tracking concepts from popular books like Atomic Habits, our app helps you build consistent routines through streak tracking, reminders, and progress analytics. Whether you want to build a morning routine, track water intake, exercise daily, meditate, read more, or any other positive habit, Happy Habits makes it simple and motivating.</p>
 </section>
 
 <section id="contact" class="contact">
@@ -336,12 +423,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
