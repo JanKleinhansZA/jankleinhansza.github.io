@@ -1,425 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>CloudMobile | Global Software Development</title>
+<meta charset="UTF-8" />
+<title>CloudMobile | Software Engineering — Android, Web & Cloud</title>
 
-    <!-- SEO -->
-    <meta name="description" content="Global Software Development. Engineering Digital Solutions Worldwide. Android, web, and backend development services. Download Easy Budget - Spending Tracker and Happy Habits - Daily Habit Tracker, our intelligent apps on Google Play." />
-    <meta name="keywords" content="mobile app development, android development, web development, backend development, software engineering, global software solutions, mobile app design, cloud software, budget management app, spending tracker, easy budget, habit tracker, daily habits, habit building, atomic habits, habit streak, routine tracker, productivity app, happy habits, goal tracking, self improvement app" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
+<!-- SEO -->
+<meta name="description" content="CloudMobile is a South African software house building Android apps, websites, backend systems and cloud infrastructure for businesses worldwide. Makers of Easy Budget and Happy Habits on Google Play." />
+<meta name="keywords" content="mobile app development, android development, web development, backend development, software engineering, IT services South Africa, custom software, cloud infrastructure, e-commerce development, network security, easy budget app, happy habits app" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="index, follow" />
 
+<meta property="og:type" content="business.business">
+<meta property="og:title" content="CloudMobile — Software Engineering for Android, Web & Cloud">
+<meta property="og:description" content="Android apps, websites, backend systems and cloud infrastructure, engineered end-to-end by CloudMobile (Pty) Ltd, South Africa.">
+<meta property="og:url" content="https://cloudmobile.co.za">
+<meta property="business:contact_data:street_address" content="Gauteng, South Africa">
+<meta property="business:contact_data:country_name" content="South Africa">
 
-    <meta property="og:type" content="business.business">
-    <meta property="og:title" content="CloudMobile - Global Software Development Services">
-    <meta property="og:description" content="Comprehensive software development services including Android, web, and backend solutions for businesses worldwide.">
-    <meta property="og:url" content="https://cloudmobile.co.za">
-    <meta property="business:contact_data:street_address" content="South Africa">
-    <meta property="business:contact_data:country_name" content="South Africa">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CloudMobile — Software Engineering for Android, Web & Cloud">
+<meta name="twitter:description" content="Android apps, websites, backend systems and cloud infrastructure, engineered end-to-end.">
 
-    <!-- Twitter Card Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CloudMobile - Global Software Development">
-    <meta name="twitter:description" content="Expert mobile, web, and backend development services spanning across international markets.">
+<link rel="canonical" href="https://cloudmobile.co.za" />
+<link rel="icon" type="image/png" sizes="256x256" href="/favicon-256x256.png">
 
-    <link rel="canonical" href="https://cloudmobile.co.za" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="256x256" href="/favicon-256x256.png">
+<style>
+  :root {
+    --ink:        #0a0e16;
+    --panel:      #10151f;
+    --panel-2:    #0d1220;
+    --line:       #1e2a3d;
+    --paper:      #edeff3;
+    --steel:      #8a94a6;
+    --signal:     #ffb020;
+    --signal-dim: rgba(255,176,32,0.14);
+    --live:       #34d399;
+    --radius:     10px;
+  }
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    <style>
-        :root {
-            --primary: #3b82f6;
-            --bg-dark: #020617;
-            --bg-card: #0f172a;
-            --text-main: #f8fafc;
-            --text-dim: #94a3b8;
-            --border: rgba(255,255,255,0.08);
-        }
+  html { scroll-behavior: smooth; }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: radial-gradient(circle at top, #020617, #000);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--ink);
+    background-image:
+      linear-gradient(var(--line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--line) 1px, transparent 1px);
+    background-size: 64px 64px;
+    background-position: center top;
+    background-attachment: fixed;
+    color: var(--paper);
+    line-height: 1.6;
+  }
 
-        a { text-decoration: none; color: inherit; }
+  a { text-decoration: none; color: inherit; }
+  ::selection { background: var(--signal); color: var(--ink); }
 
-        /* HEADER */
-        header.top {
-            border-bottom: 1px solid var(--border);
-            background: rgba(2,6,23,0.85);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+    outline: 2px solid var(--signal);
+    outline-offset: 3px;
+  }
 
-        .nav {
-            max-width: 1200px;
-            margin: auto;
-            padding: 1.4rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+  .mono { font-family: 'JetBrains Mono', monospace; }
 
-        .brand {
-            display: flex;
-            align-items: center;
-            font-weight: 800;
-            letter-spacing: 1.5px;
-            font-size: 1.25rem;
-        }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 2rem; }
 
-        .logo-cloud {
-            color: #ffffff;
-        }
+  /* ── HEADER ── */
+  header.top {
+    border-bottom: 1px solid var(--line);
+    background: rgba(10,14,22,0.86);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
 
-        .logo-mobile {
-            color: var(--primary);
-            margin-left: 2px;
-            position: relative;
-        }
+  .nav {
+    max-width: 1180px;
+    margin: auto;
+    padding: 1.3rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-        /* subtle tech underline */
-        .logo-mobile::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -4px;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(
-                    90deg,
-                    transparent,
-                    var(--primary),
-                    transparent
-            );
-        }
+  .brand {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    font-size: 1.2rem;
+  }
+  .logo-cloud { color: #7dd3fc; }
+  .logo-mobile {
+    color: #3b82f6;
+    margin-left: 2px;
+    position: relative;
+  }
+  .logo-mobile::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  }
 
-        .brand span:last-child { color: var(--primary); }
+  nav.links { display: flex; align-items: center; gap: 2.2rem; }
+  nav.links a {
+    color: var(--steel);
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  nav.links a:hover { color: var(--paper); }
+  nav.links a.cta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--signal);
+    border: 1px solid rgba(255,176,32,0.35);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+  }
+  nav.links a.cta:hover { background: var(--signal-dim); }
 
-        nav a {
-            margin-left: 2rem;
-            color: var(--text-dim);
-            font-size: 0.95rem;
-        }
+  /* ── HERO ── */
+  .hero {
+    padding: 5.5rem 0 4rem;
+  }
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem;
+    color: var(--signal);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--live);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(52,211,153,0.15);
+  }
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2.2rem, 3.6vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.1rem;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--signal);
+  }
+  .hero p {
+    color: var(--steel);
+    font-size: 1.05rem;
+    max-width: 480px;
+    margin-bottom: 2rem;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--signal);
+    color: var(--ink);
+    font-weight: 600;
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .btn-primary:hover { transform: translateY(-2px); background: #ffc450; }
+  .btn-outline {
+    border: 1px solid var(--line);
+    color: var(--paper);
+    padding: 0.85rem 1.6rem;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .btn-outline:hover { border-color: var(--signal); transform: translateY(-2px); }
 
-        nav a:hover { color: var(--primary); }
+  /* Terminal signature panel */
+  .terminal {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 30px 60px -30px rgba(0,0,0,0.6);
+  }
+  .terminal-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 1rem;
+    border-bottom: 1px solid var(--line);
+    background: var(--panel-2);
+  }
+  .terminal-bar span {
+    width: 9px; height: 9px; border-radius: 50%;
+    background: #33394a;
+  }
+  .terminal-bar .title {
+    margin-left: 0.6rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--steel);
+  }
+  .terminal-body {
+    padding: 1.4rem 1.3rem 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.82rem;
+    line-height: 1.9;
+  }
+  .terminal-body .cmd { color: var(--paper); }
+  .terminal-body .cmd::before { content: '$ '; color: var(--signal); }
+  .terminal-line { color: var(--steel); white-space: pre; }
+  .terminal-line .path { color: #a5b4cb; }
+  .status-live { color: var(--live); }
+  .status-build { color: var(--signal); }
+  .terminal-foot {
+    margin-top: 0.8rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed var(--line);
+    color: var(--steel);
+    font-size: 0.78rem;
+  }
 
-        /* HERO */
-        .hero {
-            max-width: 100%;
-            padding: 6rem 2rem 5rem;
-            text-align: center;
+  section { padding: 4.5rem 0; }
 
-            background:
-                    radial-gradient(circle at top center,
-                    rgba(59,130,246,0.25),
-                    rgba(2,6,23,0.9) 70%),
-                    linear-gradient(180deg,
-                    rgba(59,130,246,0.18),
-                    rgba(2,6,23,1));
-        }
+  .section-head { margin-bottom: 2.4rem; max-width: 600px; }
+  .section-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--signal);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .section-head h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.7rem, 2.6vw, 2.2rem);
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  .section-head p { color: var(--steel); margin-top: 0.7rem; font-size: 0.98rem; }
 
-        .hero h1 {
-            font-size: clamp(2.4rem, 4vw, 3.8rem);
-            font-weight: 800;
-            margin-bottom: 0.6rem;
-        }
+  /* ── SERVICES: manifest / directory listing ── */
+  #services { border-top: 1px solid var(--line); }
+  .manifest {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: rgba(15,20,30,0.5);
+  }
+  .manifest-row {
+    display: grid;
+    grid-template-columns: 260px 1fr 90px;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.3rem 1.6rem;
+    border-bottom: 1px solid var(--line);
+    transition: background 0.15s ease;
+  }
+  .manifest-row:last-child { border-bottom: none; }
+  .manifest-row:hover { background: rgba(255,176,32,0.04); }
+  .manifest-path {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.88rem;
+  }
+  .manifest-path .bracket { color: var(--signal); }
+  .manifest-path .name { color: var(--paper); font-weight: 500; }
+  .manifest-desc { color: var(--steel); font-size: 0.92rem; }
+  .manifest-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--live);
+    text-align: right;
+  }
 
-        .hero h2 {
-            font-size: 1.3rem;
-            font-weight: 500;
-            color: var(--text-dim);
-            margin-bottom: 1.2rem;
-        }
+  /* ── APPS ── */
+  #product { border-top: 1px solid var(--line); }
+  .apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 1.6rem;
+  }
+  .featured {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .featured:hover { border-color: var(--signal); transform: translateY(-3px); }
 
-        .hero p {
-            max-width: 850px;
-            margin: auto;
-            color: var(--text-dim);
-        }
+  .featured-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
+  .pkg-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--steel);
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    white-space: nowrap;
+  }
+  .live-pill {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--live);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+  .live-pill::before {
+    content: '';
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--live);
+  }
 
-        section {
-            max-width: 1200px;
-            margin: auto;
-            padding: 4.5rem 2rem;
-        }
+  .featured h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+  .featured p.desc { color: var(--steel); font-size: 0.95rem; }
 
-        /* SERVICES */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-        }
+  .app-features {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.3rem 0 0.4rem;
+  }
+  .app-features li {
+    background: rgba(255,176,32,0.08);
+    color: var(--paper);
+    border: 1px solid rgba(255,176,32,0.18);
+    border-radius: 999px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.78rem;
+  }
 
-        .service {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: 0.3s;
-        }
+  .featured img.store-badge { width: 168px; margin-top: 0.3rem; }
 
-        .service:hover {
-            transform: translateY(-6px);
-            border-color: var(--primary);
-        }
+  /* ── ABOUT / WHY STRIP ── */
+  #why { border-top: 1px solid var(--line); }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+  }
+  .why-item .num {
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--signal);
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  .why-item h4 { font-family: 'Space Grotesk', sans-serif; font-size: 1.05rem; margin-bottom: 0.4rem; }
+  .why-item p { color: var(--steel); font-size: 0.9rem; }
 
-        .service img {
-            width: 90px;
-            height: 90px;
-            object-fit: contain;
-            margin-bottom: 1.2rem;
-        }
+  /* ── CONTACT ── */
+  #contact { border-top: 1px solid var(--line); text-align: center; }
+  #contact .section-head { margin-left: auto; margin-right: auto; text-align: center; }
+  .contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+  }
+  .contact-buttons a {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    color: var(--paper);
+    padding: 0.9rem 1.6rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-weight: 500;
+    font-size: 0.92rem;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  .contact-buttons a:hover { border-color: var(--signal); transform: translateY(-2px); }
+  .contact-buttons svg { width: 16px; height: 16px; fill: var(--signal); }
 
-        .service h3 { margin-bottom: 0.6rem; }
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 2.4rem 2rem;
+    text-align: center;
+    color: var(--steel);
+    font-size: 0.82rem;
+  }
+  footer .flinks { margin-bottom: 0.8rem; }
+  footer .flinks a { margin: 0 0.9rem; color: var(--steel); }
+  footer .flinks a:hover { color: var(--signal); }
+  footer .fmono { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #5c6577; }
 
-        .service p { color: var(--text-dim); font-size: 0.95rem; }
-
-        /* FEATURED APPS */
-        .apps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-            gap: 2rem;
-        }
-
-        .featured {
-            background: linear-gradient(135deg, #0f172a, #020617);
-            border: 1px solid var(--border);
-            border-radius: 22px;
-            padding: 3rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .featured:hover {
-            border-color: var(--primary);
-            transition: 0.3s;
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(34,197,94,0.15);
-            color: #22c55e;
-            padding: 0.4rem 1rem;
-            border-radius: 999px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 0.8rem;
-            width: fit-content;
-        }
-
-        .badge.purple {
-            background: rgba(168,85,247,0.15);
-            color: #a855f7;
-        }
-
-        .featured h2 {
-            font-size: 1.5rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .featured p {
-            color: var(--text-dim);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .featured .app-features {
-            list-style: none;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .featured .app-features li {
-            background: rgba(59,130,246,0.1);
-            color: var(--text-dim);
-            border: 1px solid rgba(59,130,246,0.2);
-            border-radius: 999px;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.8rem;
-        }
-
-        .featured img.store-badge { width: 180px; }
-
-        /* CONTACT */
-        .contact {
-            text-align: center;
-        }
-
-        .contact-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .contact-buttons a {
-            background: var(--primary);
-            color: #fff;
-            padding: 0.9rem 1.6rem;
-            border-radius: 999px;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-weight: 600;
-        }
-
-        .contact-buttons svg {
-            width: 18px;
-            height: 18px;
-            fill: white;
-        }
-
-        /* FOOTER */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 3rem 2rem;
-            text-align: center;
-            color: var(--text-dim);
-            font-size: 0.85rem;
-        }
-
-        footer a { margin: 0 1rem; }
-
-        @media (max-width: 600px) {
-            .apps-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  @media (max-width: 860px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .manifest-row { grid-template-columns: 1fr; gap: 0.4rem; }
+    .manifest-tag { text-align: left; }
+    nav.links a:not(.cta) { display: none; }
+  }
+</style>
 </head>
 
 <body>
 
 <header class="top">
-    <div class="nav">
-        <div class="brand">
-            <span class="logo-cloud">CLOUD</span>
-            <span class="logo-mobile">MOBILE</span>
-        </div>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#product">Apps</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+  <div class="nav">
+    <div class="brand"><span class="logo-cloud">CLOUD</span><span class="logo-mobile">MOBILE</span></div>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#product">Apps</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact" class="cta">Get a Quote</a>
+    </nav>
+  </div>
 </header>
 
 <div class="hero">
-    <h1>Global Software Development</h1>
-    <h2>Engineering Digital Solutions Worldwide</h2>
-    <p>
-        Delivering cutting-edge mobile, web, and backend development services to businesses
-        across the globe. From Android apps to complex cloud architectures.
-    </p>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">Gauteng, South Africa · Available Worldwide</div>
+      <h1>We build the software running <em>behind the scenes.</em></h1>
+      <p>CloudMobile is a full-stack software house: Android apps, websites, backend systems and cloud infrastructure, engineered end-to-end and kept running long after launch.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary">Start a project</a>
+        <a href="#product" class="btn-outline">See our apps</a>
+      </div>
+    </div>
+
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span></span><span></span><span></span>
+        <span class="title">cloudmobile — deploy status</span>
+      </div>
+      <div class="terminal-body">
+        <div class="cmd">cloudmobile deploy --status</div>
+        <div class="terminal-line"><span class="path">za.co.cloudmobile.budgetapp</span>     <span class="status-live">● live</span></div>
+        <div class="terminal-line"><span class="path">za.co.cloudmobile.happyhabits</span>   <span class="status-live">● live</span></div>
+        <div class="terminal-line"><span class="path">za.co.cloudmobile.sparkchain</span>    <span class="status-build">● building</span></div>
+        <div class="terminal-foot">6 apps shipped · builds monitored 24/7</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <section id="services">
-    <div class="services-grid">
-        <div class="service">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Android_logo_2019.png">
-            <h3>Android Development</h3>
-            <p>High-performance Android applications built for scale and reliability.</p>
-        </div>
-
-        <div class="service">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg">
-            <h3>Web Development</h3>
-            <p>Modern front-end and full-stack web solutions.</p>
-        </div>
-
-        <div class="service">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg">
-            <h3>Cloud & Backend</h3>
-            <p>Secure, scalable backend systems using Java, Spring, and cloud platforms.</p>
-        </div>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">What We Do</div>
+      <h2>One team, the whole stack.</h2>
+      <p>From the app on your customer's phone to the server it talks to — we design, build and maintain it all, so you're not juggling five different vendors.</p>
     </div>
+
+    <div class="manifest">
+      <div class="manifest-row">
+        <div class="manifest-path"><span class="bracket">/</span><span class="name">android-development</span></div>
+        <div class="manifest-desc">Native Android apps engineered for scale, published and maintained on Google Play.</div>
+        <div class="manifest-tag">active</div>
+      </div>
+      <div class="manifest-row">
+        <div class="manifest-path"><span class="bracket">/</span><span class="name">web-development</span></div>
+        <div class="manifest-desc">Marketing sites, storefronts and full-stack web apps, built for speed and search visibility.</div>
+        <div class="manifest-tag">active</div>
+      </div>
+      <div class="manifest-row">
+        <div class="manifest-path"><span class="bracket">/</span><span class="name">backend-and-cloud</span></div>
+        <div class="manifest-desc">APIs, databases and cloud infrastructure that keep your systems running around the clock.</div>
+        <div class="manifest-tag">active</div>
+      </div>
+      <div class="manifest-row">
+        <div class="manifest-path"><span class="bracket">/</span><span class="name">custom-business-software</span></div>
+        <div class="manifest-desc">Bespoke internal tools, admin dashboards and workflow systems built around how your team works.</div>
+        <div class="manifest-tag">active</div>
+      </div>
+      <div class="manifest-row">
+        <div class="manifest-path"><span class="bracket">/</span><span class="name">e-commerce</span></div>
+        <div class="manifest-desc">Online stores with integrated payments and order management, built to convert.</div>
+        <div class="manifest-tag">active</div>
+      </div>
+      <div class="manifest-row">
+        <div class="manifest-path"><span class="bracket">/</span><span class="name">it-security-and-monitoring</span></div>
+        <div class="manifest-desc">Network security audits and ongoing monitoring to keep your systems and data safe.</div>
+        <div class="manifest-tag">active</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section id="product">
-    <h2 style="margin-bottom: 2rem; font-size: 1.8rem;">Our Apps</h2>
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Our Apps</div>
+      <h2>Built by us, used by thousands.</h2>
+      <p>We don't just build for clients — we ship and maintain our own products too, which keeps us honest about what "production-ready" actually means.</p>
+    </div>
+
     <div class="apps-grid">
-
-        <!-- Easy Budget -->
-        <div class="featured">
-            <div>
-                <span class="badge">FEATURED APP</span>
-                <h2>Easy Budget – Spending Tracker</h2>
-                <p>Smart budgeting and expense tracking for everyday life. Take control of your finances with ease.</p>
-                <ul class="app-features">
-                    <li>💰 Expense Tracking</li>
-                    <li>📊 Spending Reports</li>
-                    <li>🎯 Budget Goals</li>
-                    <li>📅 Monthly Overview</li>
-                </ul>
-                <a href="https://play.google.com/store/apps/details?id=za.co.cloudmobile.budgetapp">
-                    <img class="store-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Easy Budget on Google Play">
-                </a>
-            </div>
+      <div class="featured">
+        <div class="featured-top">
+          <span class="pkg-tag">za.co.cloudmobile.budgetapp</span>
+          <span class="live-pill">Live</span>
         </div>
+        <h3>Easy Budget — Spending Tracker</h3>
+        <p class="desc">Smart budgeting and expense tracking for everyday life. Take control of your finances with ease.</p>
+        <ul class="app-features">
+          <li>Expense tracking</li>
+          <li>Spending reports</li>
+          <li>Budget goals</li>
+          <li>Monthly overview</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=za.co.cloudmobile.budgetapp">
+          <img class="store-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Easy Budget on Google Play">
+        </a>
+      </div>
 
-        <!-- Happy Habits -->
-        <div class="featured">
-            <div>
-                <span class="badge purple">NEW APP</span>
-                <h2>Happy Habits – Daily Habit Tracker</h2>
-                <p>Build better habits, break bad ones, and transform your daily routine. Track streaks, set reminders, and achieve your goals one habit at a time — inspired by the science of lasting behaviour change.</p>
-                <ul class="app-features">
-                    <li>✅ Daily Habit Tracking</li>
-                    <li>🔥 Streak Tracking</li>
-                    <li>🔔 Smart Reminders</li>
-                    <li>📈 Progress Analytics</li>
-                    <li>🎯 Goal Setting</li>
-                    <li>💪 Routine Builder</li>
-                </ul>
-                <a href="https://play.google.com/store/apps/details?id=za.co.cloudmobile.happyhabits">
-                    <img class="store-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Happy Habits on Google Play">
-                </a>
-            </div>
+      <div class="featured">
+        <div class="featured-top">
+          <span class="pkg-tag">za.co.cloudmobile.happyhabits</span>
+          <span class="live-pill">Live</span>
         </div>
-
+        <h3>Happy Habits — Daily Habit Tracker</h3>
+        <p class="desc">Build better habits, break bad ones, and reshape your daily routine with streaks, reminders and progress tracking grounded in behaviour-change science.</p>
+        <ul class="app-features">
+          <li>Habit tracking</li>
+          <li>Streaks</li>
+          <li>Smart reminders</li>
+          <li>Progress analytics</li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=za.co.cloudmobile.happyhabits">
+          <img class="store-badge" src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get Happy Habits on Google Play">
+        </a>
+      </div>
     </div>
+  </div>
 </section>
 
-<!-- Hidden SEO content for habit-related searches -->
-<section style="display:none" aria-hidden="true">
-    <p>Happy Habits is a daily habit tracker app for Android. Build atomic habits, track your daily routines, create healthy habits, and break bad habits. Similar to habit tracking concepts from popular books like Atomic Habits, our app helps you build consistent routines through streak tracking, reminders, and progress analytics. Whether you want to build a morning routine, track water intake, exercise daily, meditate, read more, or any other positive habit, Happy Habits makes it simple and motivating.</p>
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Why CloudMobile</div>
+      <h2>Software that's still running next year.</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item">
+        <span class="num mono">01</span>
+        <h4>One point of contact</h4>
+        <p>App, website and backend built by the same team, so nothing gets lost between vendors.</p>
+      </div>
+      <div class="why-item">
+        <span class="num mono">02</span>
+        <h4>Built to last</h4>
+        <p>We maintain our own apps in production, so we build yours the way we'd want to inherit it.</p>
+      </div>
+      <div class="why-item">
+        <span class="num mono">03</span>
+        <h4>South African, global reach</h4>
+        <p>Based in Gauteng, working with clients locally and abroad.</p>
+      </div>
+      <div class="why-item">
+        <span class="num mono">04</span>
+        <h4>Straight answers</h4>
+        <p>Clear timelines and honest technical advice — no jargon, no overselling.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="contact" class="contact">
-    <h2>Contact CloudMobile</h2>
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h2>Tell us what you're building.</h2>
+      <p>Whether it's a new app, a website, or a system that needs fixing — get in touch and we'll take it from there.</p>
+    </div>
     <div class="contact-buttons">
-        <a href="mailto:sales@cloudmobile.co.za">
-            ✉️ Sales Email
-        </a>
-        <a href="mailto:support@cloudmobile.co.za">
-            ✉️ Support Email
-        </a>
+      <a href="mailto:sales@cloudmobile.co.za">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>
+        sales@cloudmobile.co.za
+      </a>
+      <a href="mailto:support@cloudmobile.co.za">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5z"/></svg>
+        support@cloudmobile.co.za
+      </a>
     </div>
+  </div>
 </section>
 
 <footer>
+  <div class="flinks">
     <a href="terms.html">Terms of Service</a>
     <a href="privacy.html">Privacy Policy</a>
-    <p>© 2026 CloudMobile (PTY) LTD</p>
+  </div>
+  <p class="fmono mono">© 2026 CLOUDMOBILE (PTY) LTD · GAUTENG, SOUTH AFRICA</p>
 </footer>
 
 </body>
 </html>
+
